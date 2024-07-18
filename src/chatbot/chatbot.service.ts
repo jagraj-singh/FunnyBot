@@ -35,7 +35,7 @@ export class ChatbotService {
   static generateResponse(command: string) {
     command = command.trim().toLowerCase();
     if (command === '/start') {
-      return 'Here are the list of commands you can use. \nhello\nhi,\nhey,\nhowdy,\ngreetings';
+      return 'Hi there. I am a bot who tries to be funny. Here are the list of greetings you can send. \n\nhello\nhi,\nhey,\nhowdy,\ngreetings';
     }
     if (this.greetings.includes(command)) {
       return this.responses[Math.floor(Math.random() * this.responses.length)];
