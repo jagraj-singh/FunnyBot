@@ -33,7 +33,10 @@ export class ChatbotService {
   }
 
   static generateResponse(command: string) {
-    command = command.trim();
+    command = command.trim().toLowerCase();
+    if (command === '/start') {
+      return 'Here are the list of commands you can use. \nhello\nhi,\nhey,\nhowdy,\ngreetings';
+    }
     if (this.greetings.includes(command)) {
       return this.responses[Math.floor(Math.random() * this.responses.length)];
     }
