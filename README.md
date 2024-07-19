@@ -8,7 +8,9 @@ Simple Funy Telegram Bot
 $ npm install
 ```
 
-```build
+## Build
+
+```bash
 create a .env with following values
 
 TELEGRAM_TOKEN=xxxxxx
