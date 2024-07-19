@@ -24,6 +24,9 @@ export class ChatbotService {
     this.bot = new TelegramBot(
       this.configService.get<string>('TELEGRAM_TOKEN'),
     );
+    this.bot.setWebHook(
+      `${this.configService.get<string>('TELEGRAM_WEBHOOK')}/bot${this.configService.get<string>('TELEGRAM_TOKEN')}`,
+    );
   }
 
   msgRecieved(message: Message): string {
